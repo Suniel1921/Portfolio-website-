@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    color: white;
+
+
+}
+
+body {
+    background-color: black;
+}
+
+/* this style is for navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    /* background-color: gray; */
+    padding: 12px;
+    font-weight: bold;
+    margin: 23px 0px;
+}
+
+/* for animation start */
+.left-section h2 {
+    width: 0ch;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: text 8s steps(13) infinite alternate;
+    border-right: 3px solid white;
+}
+
+@keyframes text {
+    0% {
+        width: 0ch;
+    }
+
+    50% {
+        width: 13ch;
+    }
+
+
+}
+
+/* for animation end */
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+    text-transform: capitalize;
+    font-weight: bold;
+
+}
+
+.btn {
+    background-color: #f9004d;
+    height: 34px;
+    width: 84px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    transition: transform .5s;
+    outline: none;
+    border: none;
+}
+
+.btn:hover {
+    transform: scale(1.2);
+}
+
+/* this style is for navbar main text  */
+.main-text {
+    font-size: 23px;
+    color: white;
+
+}
+
+.main-text span {
+    color: #f9004d;
+    font-size: 23px;
+}
+
+.navbar li a:hover {
+    color: #f9004d;
+    transition: .5s;
+
+}
+
+/* this is style is for responsive navbar */
+.checkbtn {
+    font-size: 20px;
+    color: white;
+    float: right;
+    display: none;
+    /* line-height: 80px; */
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 702px) {
+    .main-text {
+        font-size: 19px;
+        padding-left: 3px;
+    }
+
+    .navbar ul li a {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 565px) {
+    .checkbtn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        /* background: red; */
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .4s;
+    }
+
+    .navbar ul li a {
+        display: block;
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+
+
+}
+
+/* mainsection style start here  */
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+    padding-top: 150px;
+
+}
+
+.left-section {
+    margin: 40px 0px;
+    font-size: 31px;
+    margin-left: 140px;
+    width: 634px;
+}
+
+.left-section span {
+    color: #f9004d;
+}
+
+.right-section {
+    /* width: 634px;
+    display: block; */
+
+
+}
+
+.main-img {}
+
+
+
+
+/* ----------- about me section ------------- */
+
+/* .about-left-sec{
+    margin-left: 45px;
+    margin-top: -134px;
+}
+
+.about-right-sec{
+
+}
+
+.about-right-sec .about-heading{
+    font-size: 45px;
+} */
+
+.about {
+    width: 100%;
+    /* padding: 100px 0px; */
+}
+
+.about img {
+    height: auto;
+    width: 430px;
+
+}
+
+.about-text {
+    width: 550px;
+}
+
+.main {
+
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 23px;
+
+}
+
+.about-text h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.about-text h1:hover {
+    color: green;
+    border: 2px dashed #f9004d;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.about-text h4 {
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.about-text .btn {
+    margin-top: 20px;
+    width: 110px;
+}
+
+.about-text span {
+    color: #f9004d;
+}
+
+/* services section   */
+.services-heading {
+    margin: 23px 0px;
+    font-size: 43px;
+    text-align: center;
+}
+
+.services {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    margin: 34px 0px;
+}
+
+.services h3 {
+    margin-bottom: 5px;
+}
+
+.services .btn {
+    margin-top: 8px;
+}
+
+.services .btn:hover {
+    background-color: #16151a;
+    color: white;
+    border: 2px solid #f9004d;
+}
+
+.services-section {
+    width: 28%;
+    /* border: 3px solid red; */
+    margin: 15px;
+    padding: 16px;
+    background-color: #16151a;
+    height: 230px;
+    border-radius: 8px;
+    transition: tranform .9s;
+    transition: all .2s;
+}
+
+.services-section:hover {
+    background-color: #f9004d;
+    cursor: pointer;
+    transform: scale(1.1);
+
+}
+
+#services-icons {
+    font-size: 44px;
+    color: #f9004d;
+    margin-bottom: 10px;
+}
+
+/* footer section */
+.footer-section {
+    text-align: center;
+    width: 34%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 455px;
+    margin-top: 23px;
+    height: 154px;
+}
+
+#social-icon {
+    font-size: 32px;
+    color: #f9004d;
+    padding: 10px;
+    text-transform: .4s;
+
+}
+
+#social-icon:hover {
+    transform: scale(1.4);
+    cursor: pointer;
+    color: white;
+}
+
+/* contact forom style */
+
+.contact-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 64px;
+    height: 434px;
+}
+
+.left-contact-sec h3 {
+    padding: 13px;
+    font-size: 29px;
+    letter-spacing: 3px;
+    font-weight: bold;
+
+}
+
+.left-contact-sec p {
+    padding: 13px;
+    font-size: 23px;
+}
+
+.contact-form-section {
+    display: grid;
+    gap: 2rem;
+    outline: none;
+    border: none;
+}
+
+.contact-form-section input {
+    font-size: 15px;
+    font-weight: bold;
+    width: 421px;
+    height: 38px;
+    outline: none;
+    border: none;
+    background-color: #16151a;
+    color: white;
+    padding-left: 12px;
+}
+
+.contact-form-section textarea {
+    font-size: 15px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    padding: 12px;
+    background-color: #16151a;
+    color: white;
+
+}
+
+.contact-form-section .btn {
+    margin-bottom: 33px;
+}
+
+.contact-form-section .btn:hover {
+    background-color: #16151a;
+    color: white;
+    border: 2px solid #f9004d;
+}
+
+
+/* footer section */
+
+.footer-sec {
+    background-color: #16151a;
+    text-align: center;
+    height: 50px;
+    padding: 34px 0px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* media queris for meke responsive website  */
+
+@media (max-width:1310px) {
+    .container {
+        /* font-size: 23px; */
+    }
+
+    .left-section h1 {
+        font-size: 43px;
+        font-weight: bold;
+    }
+
+}
+
+@media (max-width:1310px) {
+    .left-section h1 {
+        font-size: 33px;
+        font-weight: bold;
+    }
+
+    .left-section h2 {
+        font-size: 33px;
+        font-weight: bold;
+    }
+
+    .about-text h1 {
+        font-size: 43px;
+    }
+
+    .about-text h4 {
+        font-size: 33px;
+    }
+
+    .about-text p {
+        font-size: 18px;
+    }
+
+    .services {
+        margin-left: 26px;
+    }
+
+    .services-section p {
+        font-size: 13px;
+
+    }
+
+}
+
+@media (max-width: 960px) {
+    .container {
+        display: grid;
+
+        /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+    }
+
+    .left-section {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        width: 49%;
+        margin-top: -76px;
+
+    }
+
+    .left-section h2 {
+        font-size: 43px;
+        margin-left: 31px;
+
+    }
+
+}
+
+@media (max-width:540px) {
+    .about {
+        display: grid;
+        /* margin-right: 34px; */
+        justify-content: center;
+        /* align-items: center; */
+
+    }
+
+    .main {
+        display: grid;
+        margin-left: 149px;
+    }
+
+    .about-text {
+        text-align: center;
+        margin-top: 34px;
+    }
+
+    .services {
+        display: grid;
+    }
+
+    .services-section {
+        display: grid;
+        text-align: center;
+        margin-left: 234px;
+        font-size: 34px;
+        width: 334px;
+    }
+
+    .contact-section {
+        display: grid;
+        text-align: center;
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 412px) {
+    .left-section {
+        text-align: center;
+        margin-left: 54px;
+        width: 306px;
+    }
+
+    .right-section {
+        text-align: center;
+        margin-left: -80px
+    }
+
+    .about-text h1 {
+        font-size: 44px;
+        margin-right: 135px;
+    }
+
+    .about-text h4 {
+        font-size: 28px;
+        margin-right: 135px;
+    }
+
+    .about-text p {
+        font-size: 19px;
+        width: 386px;
+        height: 246px;
+    }
+
+    .about-text .btn {
+        text-align: center;
+        margin-right: 124px;
+        margin-top: 4px;
+        margin-bottom: 23px;
+    }
+
+    .services-section {
+        margin-right: 282px;
+        height: 353px px;
+        width: 367px;
+    }
+    .services-section .bnt {
+      
+        margin-left: 134px;
+    }
+
+}
